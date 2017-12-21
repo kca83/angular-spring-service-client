@@ -1,11 +1,19 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { AddUserService } from './add-user.service';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('AddUserService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AddUserService]
+      providers: [AddUserService],
+      imports: [
+        HttpModule,
+        BrowserModule,
+        FormsModule
+      ]
     });
   });
 
