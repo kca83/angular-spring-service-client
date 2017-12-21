@@ -7,7 +7,10 @@ import {AddUserService} from '../../services/add-user.service';
   templateUrl: './user-input-table.component.html',
   styleUrls: ['./user-input-table.component.css']
 })
+
+
 export class UserInputTableComponent implements OnInit {
+
   user: UserModel = {
     id: "",
     firstName: "User Name"
@@ -25,7 +28,9 @@ export class UserInputTableComponent implements OnInit {
   }
 
   addUser(): any {
-    return this.addUserService.addUser(this.createUser());
+    return this.addUserService.addUser(this.createUser()).subscribe(response => {
+      console.log(response.json());
+    });
   }
 
 

@@ -6,7 +6,5 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @Input()
-  firstName: String;
   title = 'app';
 }

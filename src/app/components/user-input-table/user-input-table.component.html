@@ -1,6 +1,7 @@
 <div>
   <label>First Name:
+    <h2>{{user.firstName}}</h2>
     <input [(ngModel)] = "user.firstName" placeholder="firstName">
   </label>
-  <input type="submit" onclick="addUser(user)"/>  
+  <input type="submit" (click)="addUser()"/>
 </div>
